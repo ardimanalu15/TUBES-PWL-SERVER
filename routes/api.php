@@ -20,6 +20,13 @@ use App\Http\Controllers\VilagerController;
 use App\Http\Controllers\KtpController;
 
 
+    Route::get('test', function (){
+        return response()->json(
+            [
+                'msg'   =>  'connection established'
+            ]
+            );
+    });
     Route::post('login', [AuthController::class,'login']);
     Route::post('register', [AuthController::class,'register']);
 
